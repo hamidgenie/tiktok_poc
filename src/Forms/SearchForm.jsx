@@ -6,6 +6,8 @@ import {
   setChallengeInfo,
   setChallenges,
   setUser,
+  setUserFollowers,
+  setUserVideos,
   setVideos,
 } from "../redux/appSlice";
 
@@ -54,6 +56,8 @@ export function SearchForm() {
       });
 
       dispatch(setUser(userInfo));
+      dispatch(setUserFollowers(userFollowers));
+      dispatch(setUserVideos(userVideos));
       dispatch(setChallenges(challenge_list));
       dispatch(setChallengeInfo(hashtagInfo));
       dispatch(setVideos(aweme_list));
